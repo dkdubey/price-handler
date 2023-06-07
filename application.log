@@ -1,0 +1,26 @@
+Jun 07, 2023 1:07:01 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Jun 07, 2023 1:07:01 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Tomcat]
+Jun 07, 2023 1:07:01 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet engine: [Apache Tomcat/9.0.58]
+Jun 07, 2023 1:07:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring embedded WebApplicationContext
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber publishPrice
+INFO: Published price: Price{id=106, instrument='EUR-USD', bid=1.098900, ask=1.201200, timestamp=2023-06-07T13:07:01.274}
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber publishPrice
+INFO: Published price: Price{id=107, instrument='EUR-JPY', bid=119.4804, ask=120.0199, timestamp=2023-06-07T13:07:01.277}
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber publishPrice
+INFO: Published price: Price{id=108, instrument='GBP-USD', bid=1.248750, ask=1.257256, timestamp=2023-06-07T13:07:01.277}
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber publishPrice
+INFO: Published price: Price{id=109, instrument='GBP-USD', bid=1.248650, ask=1.257356, timestamp=2023-06-07T13:07:01.278}
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber publishPrice
+INFO: Published price: Price{id=110, instrument='EUR-JPY', bid=119.4904, ask=120.0299, timestamp=2023-06-07T13:07:01.279}
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber writePricesToCSV
+INFO: Prices written to CSV: prices.csv
+Jun 07, 2023 1:07:01 PM com.santander.pricehandler.PriceSubscriber readPricesFromCSV
+INFO: Prices read from CSV: prices.csv
+Jun 07, 2023 1:07:02 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Jun 07, 2023 1:07:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring DispatcherServlet 'dispatcherServlet'

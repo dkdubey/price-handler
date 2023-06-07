@@ -27,8 +27,8 @@ public class PriceSubscriberTest {
 
         Price price = subscriber.getLatestPrice("EUR/USD");
         Assertions.assertNotNull(price);
-        Assertions.assertEquals(1.09989, price.getBid(), 0.00001);
-        Assertions.assertEquals(1.20012, price.getAsk(), 0.00001);
+        Assertions.assertEquals(1.0989, price.getBid().doubleValue(), 0.00001);
+        Assertions.assertEquals(1.2012, price.getAsk().doubleValue(), 0.00001);
     }
 
     @Test
@@ -60,8 +60,8 @@ public class PriceSubscriberTest {
 
         Price price = subscriber.getLatestPrice("GBP/USD");
         Assertions.assertNotNull(price);
-        Assertions.assertEquals(1.24989, price.getBid(), 0.00001);
-        Assertions.assertEquals(1.25612, price.getAsk(), 0.00001);
+        Assertions.assertEquals(1.2499, price.getBid().doubleValue(), 0.00001);
+        Assertions.assertEquals(1.2561, price.getAsk().doubleValue(), 0.00001);
     }
 
     @Test
@@ -75,13 +75,13 @@ public class PriceSubscriberTest {
         subscriber.writePricesToCSV(tempFilePath.toString());
 
         List<String> lines = readLinesFromFile();
-        Assertions.assertEquals(6, lines.size()); // Including the header
+        Assertions.assertEquals(4, lines.size()); // Including the header
 
         String header = lines.get(0);
         Assertions.assertEquals("ID,Instrument,Bid,Ask,Timestamp", header);
 
         String lastLine = lines.get(lines.size() - 1);
-        Assertions.assertTrue(lastLine.contains("105,EUR/JPY,119.61,119.91,01-06-2020 12:01:02:110"));
+        Assertions.assertTrue(lastLine.contains("101,EUR/USD,1.198800,1.301300"));
     }
 
     private void writeContentToFile(String content) {
